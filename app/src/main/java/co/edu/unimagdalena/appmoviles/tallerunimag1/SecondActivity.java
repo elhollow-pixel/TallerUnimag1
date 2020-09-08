@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
     EditText n1,n2;
-    Button sumar,resta,multi,div,mcm,mcd,mayor;
+    Button sumar,resta,multiplicacion,division,mcm,mcd,mayor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,16 +20,16 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         n2 = findViewById(R.id.edtn2);
         sumar = findViewById(R.id.btnsumar);
         resta = findViewById(R.id.btnrestar);
-        multi = findViewById(R.id.btnmultiplicar);
-        div = findViewById(R.id.btndivision);
+        multiplicacion = findViewById(R.id.btnmultiplicar);
+        division = findViewById(R.id.btndivision);
         mcm = findViewById(R.id.btnmcm);
         mcd = findViewById(R.id.btnmcd);
         mayor = findViewById(R.id.btnmayor);
 
         sumar.setOnClickListener(this);
         resta.setOnClickListener(this);
-        multi.setOnClickListener(this);
-        div.setOnClickListener(this);
+        multiplicacion.setOnClickListener(this);
+        division.setOnClickListener(this);
         mcm.setOnClickListener(this);
         mcd.setOnClickListener(this);
         mayor.setOnClickListener(this);
@@ -112,9 +112,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.btnmayor:
 
-                int mayor;
-                mayor = Math.max(a,b);
-                Toast.makeText(this,"el Mayor es: "+mayor,Toast.LENGTH_LONG).show();
+                if(a > b){
+                    Toast.makeText(this,"el Mayor es: "+a,Toast.LENGTH_LONG).show();
+                }else if( a == b){
+                    Toast.makeText(this,"son iguales ",Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(this,"el Mayor es: "+b,Toast.LENGTH_LONG).show();
+                }
 
                 break;
 

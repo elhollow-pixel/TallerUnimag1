@@ -10,4 +10,9 @@
     <string name="dato2">Numero 2</string>
     <string name="sumar">Sumar</string>
     <string name="restar">Restar</string>
+    <string name="multiplicar">Multiplicar</string>
+    <string name="division">Division</string>
+    <string name="mcm">MCM</string>
+    <string name="mcd">MCD</string>
+    <string name="mayor">Mayor</string>
 </resources>

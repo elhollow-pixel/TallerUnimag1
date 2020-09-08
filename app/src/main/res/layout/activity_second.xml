@@ -25,7 +25,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="744dp"
         android:layout_weight="0.5"
         android:orientation="vertical">
 
@@ -70,6 +70,52 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/restar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnmultiplicar"
+                android:layout_width="93dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/multiplicar" />
+
+            <Button
+                android:id="@+id/btndivision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/division" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnmcm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mcm" />
+
+            <Button
+                android:id="@+id/btnmcd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mcd" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnmayor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mayor" />
     </LinearLayout>
 
     <LinearLayout

@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
     EditText n1,n2;
-    Button sumar,resta;
+    Button sumar,resta,multi,div,mcm,mcd,mayor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,9 +20,19 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         n2 = findViewById(R.id.edtn2);
         sumar = findViewById(R.id.btnsumar);
         resta = findViewById(R.id.btnrestar);
+        multi = findViewById(R.id.btnmultiplicar);
+        div = findViewById(R.id.btndivision);
+        mcm = findViewById(R.id.btnmcm);
+        mcd = findViewById(R.id.btnmcd);
+        mayor = findViewById(R.id.btnmayor);
 
         sumar.setOnClickListener(this);
         resta.setOnClickListener(this);
+        multi.setOnClickListener(this);
+        div.setOnClickListener(this);
+        mcm.setOnClickListener(this);
+        mcd.setOnClickListener(this);
+        mayor.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +53,29 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(this,"resta: "+(a-b),Toast.LENGTH_LONG).show();
                 break;
 
+            case R.id.btnmultiplicar:
+
+                Toast.makeText(this,"Multiplicacion: "+(a*b),Toast.LENGTH_LONG).show();
+                break;
+
+            case R.id.btndivision:
+
+                if(b == 0) {
+
+                    Toast.makeText(this,"el numero 2 no puede ser 0",Toast.LENGTH_LONG).show();
+
+                }else {
+
+                    float c = a;
+                    float d = b;
+                    Toast.makeText(this, "division: " + (c / d), Toast.LENGTH_LONG).show();
+                }
+
+                break;
+
+
+
         }
+
     }
 }
